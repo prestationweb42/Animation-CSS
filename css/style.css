@@ -11,7 +11,7 @@ h1 {
     padding: 20px 0;
     font-size: 50px;
 }
-.container{
+.container {
     width: 100%;
     min-height: 500px;
     display: flex;
@@ -21,7 +21,7 @@ h1 {
 }
 .anim__overline,
 .anim__underline,
-.anim__slide-text {
+.anim__slide__text {
     font-size: 30px;
     color: #000;
     text-decoration: none;
@@ -60,3 +60,21 @@ h1 {
     transform: scaleX(1);
 }
 /* Second Animation */
+.anim__slide__text {
+    overflow: hidden;
+    position: relative;
+}
+.anim__slide__text span {
+    padding: 10px;
+    display: inline-block;
+    transition: transform 300ms ease-in-out;
+}
+.anim__slide__text span:last-child {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 100%;
+}
+.anim__slide__text:hover span {
+    transform: translateX(-100%);
+}
